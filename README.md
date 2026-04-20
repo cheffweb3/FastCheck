@@ -18,7 +18,7 @@ Get your auth token with /token
 Paste the token into the extension to log in
 
 Plans:
-Basic - 5 Checks/Day
+Free - 5 Checks/Day
 Basic - 100 Checks/Day
 Pro - 300 Checks/Day
 
