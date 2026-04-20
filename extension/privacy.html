@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FastCheck — Privacy Policy</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif;
+      background: #0d0d0f;
+      color: rgba(255,255,255,0.75);
+      line-height: 1.7;
+      padding: 60px 20px;
+    }
+    .container { max-width: 680px; margin: 0 auto; }
+    h1 { font-size: 28px; font-weight: 600; color: #fff; margin-bottom: 8px; }
+    .meta { font-size: 13px; color: rgba(255,255,255,0.3); margin-bottom: 48px; }
+    h2 { font-size: 16px; font-weight: 600; color: #fff; margin: 36px 0 12px; }
+    p { font-size: 14px; margin-bottom: 12px; }
+    ul { padding-left: 20px; margin-bottom: 12px; }
+    li { font-size: 14px; margin-bottom: 6px; }
+    a { color: #5b9cf6; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .divider { height: 0.5px; background: rgba(255,255,255,0.08); margin: 48px 0; }
+    .badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: 20px;
+      background: rgba(74,222,128,0.08);
+      color: #4ade80;
+      border: 0.5px solid rgba(74,222,128,0.15);
+      margin-bottom: 24px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="badge">Legal</div>
+    <h1>Privacy Policy</h1>
+    <p class="meta">FastCheck · Last updated: April 20, 2026</p>
+
+    <h2>1. Introduction</h2>
+    <p>FastCheck ("we", "our", or "us") is a real-time narrative fact-checking tool for memecoin traders. This Privacy Policy explains how we collect, use, and protect information when you use the FastCheck Chrome extension and Telegram bot.</p>
+    <p>By using FastCheck, you agree to the collection and use of information as described in this policy.</p>
+
+    <h2>2. Information We Collect</h2>
+    <p>We collect only what is strictly necessary to provide the service:</p>
+    <ul>
+      <li><strong>Telegram ID</strong> — used to identify your account and link it to your subscription plan. Collected when you start the bot with /start.</li>
+      <li><strong>Auth token</strong> — a unique UUID generated per account, stored locally in your browser and used to authenticate API requests.</li>
+      <li><strong>Tweet text</strong> — the content of tweets you submit for fact-checking. Sent to our API solely to generate a verdict. Verdicts are cached to avoid redundant processing.</li>
+      <li><strong>Solana wallet address</strong> — collected only during the payment flow to match your SOL transaction to your account. Not stored permanently after payment is confirmed.</li>
+      <li><strong>Payment transaction signature</strong> — stored to prevent duplicate payment processing.</li>
+      <li><strong>Usage data</strong> — number of fact-checks performed per day, used solely for quota enforcement.</li>
+    </ul>
+
+    <h2>3. Information We Do Not Collect</h2>
+    <ul>
+      <li>We do not collect your browsing history</li>
+      <li>We do not collect your IP address beyond what is required for rate limiting</li>
+      <li>We do not collect any personally identifiable information beyond your Telegram ID</li>
+      <li>We do not use cookies or tracking pixels</li>
+      <li>We do not sell, rent, or share your data with third parties for marketing purposes</li>
+      <li>We do not collect data from pages you visit outside of the supported platforms (X.com, Axiom, Padre, GMGN)</li>
+    </ul>
+
+    <h2>4. How We Use Your Information</h2>
+    <ul>
+      <li><strong>Authentication</strong> — your Telegram ID and auth token are used to verify your identity and enforce plan limits</li>
+      <li><strong>Fact-checking</strong> — tweet text is sent to an AI model with web and X search enabled to generate verdicts</li>
+      <li><strong>Caching</strong> — verdicts are stored in our database and cache to serve repeat checks instantly without additional AI calls</li>
+      <li><strong>Payment processing</strong> — wallet addresses are used temporarily to match SOL payments to accounts</li>
+      <li><strong>Abuse prevention</strong> — rate limiting and quota enforcement to ensure fair usage across all users</li>
+    </ul>
+
+    <h2>5. Third-Party Services</h2>
+    <p>FastCheck uses the following third-party services to operate:</p>
+    <ul>
+      <li><strong>xAI (Grok)</strong> — AI model and search provider. Tweet text is sent to xAI's API for fact-checking. Subject to <a href="https://x.ai/legal/privacy-policy" target="_blank">xAI's Privacy Policy</a>.</li>
+      <li><strong>Telegram</strong> — used for user onboarding, authentication, and payment flows. Subject to <a href="https://telegram.org/privacy" target="_blank">Telegram's Privacy Policy</a>.</li>
+      <li><strong>Helius</strong> — Solana blockchain webhook provider used for payment detection. Subject to <a href="https://helius.dev/privacy" target="_blank">Helius's Privacy Policy</a>.</li>
+      <li><strong>Supabase</strong> — database provider for storing user accounts and verdict history. Subject to <a href="https://supabase.com/privacy" target="_blank">Supabase's Privacy Policy</a>.</li>
+      <li><strong>Upstash</strong> — Redis cache provider for quota tracking and verdict caching. Subject to <a href="https://upstash.com/privacy" target="_blank">Upstash's Privacy Policy</a>.</li>
+      <li><strong>Railway</strong> — cloud hosting provider for our API and bot. Subject to <a href="https://railway.app/legal/privacy" target="_blank">Railway's Privacy Policy</a>.</li>
+    </ul>
+
+    <h2>6. Data Retention</h2>
+    <ul>
+      <li><strong>Verdicts</strong> — stored permanently in our database as part of our fact-check history dataset</li>
+      <li><strong>Cached verdicts</strong> — stored in Redis with a TTL of 6-48 hours depending on popularity, then automatically deleted</li>
+      <li><strong>User accounts</strong> — retained as long as your account is active</li>
+      <li><strong>Quota counters</strong> — reset every 24 hours automatically</li>
+      <li><strong>Wallet addresses</strong> — cleared from your account record after payment is confirmed</li>
+    </ul>
+
+    <h2>7. Data Security</h2>
+    <p>We take reasonable measures to protect your information:</p>
+    <ul>
+      <li>All API communication is encrypted via HTTPS</li>
+      <li>Auth tokens are randomly generated UUIDs with no personal information encoded</li>
+      <li>Database access is restricted to our backend services only</li>
+      <li>No sensitive credentials are stored in the open-source extension code</li>
+    </ul>
+
+    <h2>8. Your Rights</h2>
+    <p>You have the right to:</p>
+    <ul>
+      <li><strong>Opt out</strong> — disconnect the extension at any time via the settings panel. This stops all data collection immediately.</li>
+    </ul>
+
+    <h2>9. Children's Privacy</h2>
+    <p>FastCheck is not intended for users under the age of 18. We do not knowingly collect information from minors. If you believe a minor has provided us with personal information, contact us and we will delete it immediately.</p>
+
+    <h2>10. Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. Changes will be reflected by updating the "Last updated" date at the top of this page. Continued use of FastCheck after changes constitutes acceptance of the updated policy.</p>
+
+    <div class="divider"></div>
+
+    <h2>Contact</h2>
+    <p>For privacy-related questions or data requests, contact us via Telegram:</p>
+    <p><a href="https://t.me/FastCheckSolanaBot" target="_blank">@FastCheckSolanaBot</a></p>
+  </div>
+</body>
+</html>

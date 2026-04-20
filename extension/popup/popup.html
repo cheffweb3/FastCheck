@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="popup.css">
+  <title>FastCheck</title>
+</head>
+<body>
+  <div id="view-onboarding" class="view hidden">
+    <div class="logo">FastCheck</div>
+    <p class="sub">Connect your Telegram account to start fact-checking.</p>
+    <div class="token-input-wrap">
+      <input type="text" id="token-input" placeholder="Paste your token from /token command" />
+      <button id="connect-btn">Connect</button>
+    </div>
+    <p class="hint">Open <strong>@FastCheckBot</strong> on Telegram and send <code>/token</code></p>
+  </div>
+
+  <div id="view-main" class="view hidden">
+    <div class="header">
+      <span class="logo-sm">FastCheck</span>
+      <span id="plan-badge" class="plan-badge"></span>
+    </div>
+
+    <div class="section">
+      <div class="section-label">Account</div>
+      <div class="stat-row">
+        <span class="stat-label">Plan</span>
+        <span id="stat-plan" class="stat-val"></span>
+      </div>
+      <div class="stat-row" id="checks-row">
+        <span class="stat-label">Checks today</span>
+        <span id="stat-checks" class="stat-val"></span>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-label">Settings</div>
+      <div class="setting-row">
+        <span class="setting-name">Show on timeline</span>
+        <label class="switch">
+          <input type="checkbox" id="timeline-toggle" checked>
+          <span class="slider"></span>
+        </label>
+      </div>
+    </div>
+
+    <div class="section">
+      <button id="disconnect-btn">Disconnect</button>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
